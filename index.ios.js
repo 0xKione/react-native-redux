@@ -1,4 +1,4 @@
-// index.android.js
+// index.ios.js
 
 import { AppRegistry } from 'react-native';
 

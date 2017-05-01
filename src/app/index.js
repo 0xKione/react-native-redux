@@ -1,14 +1,22 @@
-// src/app.index.js
+// src/app/index.js
 
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+import reducers from './reducers/';
+import { Header } from './components/common/';
 
 class App extends Component {
   render() {
     return (
-      <View>
-        <Text>Hi!</Text>
-      </View>
+      <Provider store={createStore(reducers)}>
+        <View>
+          <Header headerText="Tech Stack" />
+          <Text>Hi!</Text>
+        </View>
+      </Provider>
     );
   }
 }
